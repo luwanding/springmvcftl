@@ -308,10 +308,10 @@ public class HttpClient implements java.io.Serializable {
 		result.setResponseHeads(response.getAllHeaders());
 		result.setResponseCode((short) response.getStatusLine().getStatusCode());
 		String htmlSrc = new String(result.getResponseByte());
-		if(htmlSrc.indexOf(ResumeParseConfig.getValue(ResumeParseConfig.ZHILIAN_LOGIN_REDO_FLAG2)) > 0){
+		/*if(htmlSrc.indexOf(ResumeParseConfig.getValue(ResumeParseConfig.ZHILIAN_LOGIN_REDO_FLAG2)) > 0){
 			result.setReLogin(true);//需要重新登录
 			Log.error("智联招聘重新登录, timestamp:" + System.currentTimeMillis() + ", html content:" + htmlSrc + ", url:" + url);
-		}
+		}*/
 		
 		if (HTTP_STATUS_CODE_403 == result.getResponseCode()) {
 			Log.error("重新登录, timestamp:" + System.currentTimeMillis() + ", html content:" + htmlSrc + ", url:" + url);
