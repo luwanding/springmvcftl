@@ -1,7 +1,7 @@
 package com.fiveone.log;
 
 
-import com.chyjr.platform.common.util.DateTimeUtil;
+import com.fiveone.util.DateTimeUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

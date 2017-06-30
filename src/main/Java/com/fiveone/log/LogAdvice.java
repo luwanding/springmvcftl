@@ -1,7 +1,7 @@
 package com.fiveone.log;
 
 
-import com.chyjr.platform.common.util.DateTimeUtil;
+import com.fiveone.util.DateTimeUtil;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.apache.commons.lang.StringUtils;
