@@ -30,7 +30,7 @@ import java.util.regex.Pattern;
 /**
  * HTTP客户端工具类， 包括分发HTTP请求到代理服务器。
  * 
- * @author xudelin
+ * @author lwd
  */
 public class HttpClient implements java.io.Serializable {
 	

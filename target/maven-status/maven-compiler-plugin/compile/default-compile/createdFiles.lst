@@ -1,0 +1,15 @@
+com\fiveone\util\DateTimeUtil.class
+com\fiveone\util\HttpResult.class
+com\fiveone\log\LogAdvice.class
+com\fiveone\util\ResumeParseConfig.class
+com\fiveone\excelption\PlatformCloudExceptionBiz.class
+com\fiveone\util\SSLAnyTrustStrategy.class
+com\fiveone\log\LogGenerIdContainer.class
+com\fiveone\excelption\PlatformCloudExceptionNotFund.class
+com\fiveone\util\HttpClient.class
+com\fiveone\excelption\PlatformCloudException.class
+com\fiveone\excelption\PlatformCloudExceptionHttpRequest.class
+com\fiveone\excelption\PlatformCloudExceptionGetHttpClient.class
+com\fiveone\util\HttpConnectionManager.class
+com\fiveone\log\LogTrace.class
+com\fiveone\controller\MyController.class

@@ -5,6 +5,7 @@ import com.fiveone.util.HttpResult;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -31,6 +32,7 @@ public class HttpclientYaohuo {
     private static final String homeKey = "首页>论坛>所有最新贴子";
     private static final String endKey = "加载更多";
     private static final String Home_Url = "https://yaohw.com/";
+    private static Logger Log = Logger.getLogger(HttpclientYaohuo.class);
     static {
         headMap.put("Host", "yaohw.com");
         headMap.put("Connection", "keep-alive");
@@ -57,16 +59,25 @@ public class HttpclientYaohuo {
 
     @Test
     public void test() throws Exception {
+        Log.debug("开始请求登录接口!");
         try {
             boolean bl = login("18874264730", "151809");
             if(bl){
-                System.out.println("ok");
-                List<Map<String,Object>> list = getUrl();
+                int sum = 0 ;
+                while(true){
+                    if(sum > 20){
+                        break;
+                    }
+                    List<Map<String,Object>> list = getUrl();
                 /*for (Map<String,Object> map:list
                      ) {
                     System.out.println(map.get("title")+"__"+map.get("articleurl")+"__"+map.get("replyurl"));
                 }*/
-                onToTop(list);
+                    onToTop(list);
+                    System.out.println("休眠中。。。。。。。。。");
+                    Thread.sleep(50000);
+                    System.out.println("休眠结束。。。。。。。。。");
+                }
             }else{
                 System.out.println("请稍后重试!!");
             }
